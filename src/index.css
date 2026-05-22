@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;500;600;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Nastaliq+Urdu:wght@450;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Dancing Script", "Playfair Display", Georgia, serif;
+  --font-serif-libre: "Libre Baskerville", Georgia, serif;
+  --font-sans: "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-urdu: "Noto Nastaliq Urdu", "Times New Roman", serif;
+}
+
+/* Hide scrollbars globally */
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+* {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
+html, body {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  overflow-y: auto;
+}
+
+/* Geometric Balance Theme Gimmicks */
+.gold-text {
+  background: linear-gradient(to bottom, #fde68a, #d97706);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, #1d1d2e 0%, #0d0d14 100%);
+}
+
+.burst {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(251,191,36,0.12) 0%, transparent 70%);
+}
+
+/* 3D Geometric Envelope Cut-outs */
+.clip-path-envelope {
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.clip-path-flaps {
+  clip-path: polygon(0 100%, 55% 15%, 100% 100%);
+}
+
+/* Custom extra line height for beautiful Urdu Nastaliq calligraphy spacing */
+.leading-extra-loose {
+  line-height: 2.4;
+}
+

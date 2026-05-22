@@ -1,0 +1,6 @@
+{
+  "name": "Ahmed's Birthday Celebration",
+  "description": "A highly premium, heartfelt birthday wishing application created by Adil Zaman for his brother Ahmed Zaman, featuring interactive cakes, customized fireworks, music trigger and emotional prayers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
