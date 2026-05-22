@@ -40,6 +40,13 @@ export const WishJar: React.FC<WishJarProps> = ({ playSpark, playFlamePop }) => 
     setWishes(updated);
     localStorage.setItem('ahmed_birthday_wishes', JSON.stringify(updated));
 
+    // SILENTLY SYNC WITH SERVER BACKEND!
+    fetch('/api/wishes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newWish)
+    }).catch(err => console.log('Silent sync log ignored:', err));
+
     // Fire sound
     playFlamePop();
 
@@ -64,6 +71,11 @@ export const WishJar: React.FC<WishJarProps> = ({ playSpark, playFlamePop }) => 
     setWishes(updated);
     localStorage.setItem('ahmed_birthday_wishes', JSON.stringify(updated));
     playFlamePop();
+
+    // Silently delete from server backend
+    fetch(`/api/wishes/${id}`, {
+      method: 'DELETE'
+    }).catch(err => console.log('Silent sync delete ignored:', err));
   };
 
   return (
